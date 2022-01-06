@@ -9,8 +9,12 @@ function helloMyFriend() {
   })
 }
 
-export default () => {
-  const helloItsMe = new CronJob.CronJob('* * * * *', helloMyFriend)
+const processName = process.env.name || 'primary'
 
-  helloItsMe.start()
+export default () => {
+  if(processName.search(/primary/) !== -1) {
+    const helloItsMe = new CronJob.CronJob('* * * * *', helloMyFriend)
+  
+    helloItsMe.start()
+  }
 }
