@@ -9,6 +9,7 @@
     "dev:win32": "SET NODE_ENV=development&&nodemon --exec ts-node --files src/app.ts",
     "dev:darwin:linux": "export NODE_ENV=development&&nodemon --exec ts-node --files src/app.ts",
     "build": "tsc",
+    "production": "pm2 start pm2.json",
     "start": "npm run build&&node build/src/app.js"
   },
   "keywords": [],

@@ -31,7 +31,7 @@ apt-get install -y nodejs
 apt update && apt install sudo curl && curl -sL https://raw.githubusercontent.com/Unitech/pm2/master/packager/setup.deb.sh | sudo -E bash -
 ```
 
-#### Two way yarn or npm:
+#### Two way: yarn or npm:
 ```bash
 npm install pm2 -g
 ```
