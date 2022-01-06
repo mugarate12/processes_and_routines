@@ -2,9 +2,9 @@ import { Router } from 'express'
 
 const router = Router()
 
-let informations: Array<{
+export let informations: Array<{
   user: string,
-  content: 'sou um email'
+  content: string
 }> = []
 
 router.get('/', (req, res) => {

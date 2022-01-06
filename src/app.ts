@@ -3,6 +3,7 @@ import cors from 'cors'
 import http from 'http'
 
 import routes from './routes'
+import routines from './routines'
 
 const app = express()
 const server = http.createServer(app)
@@ -19,6 +20,8 @@ app.use(cors({
 app.use(express.json())
 
 app.use(routes)
+
+routines()
 
 server.listen(PORT, () => {
   console.log(`listening on port ${PORT}`)
